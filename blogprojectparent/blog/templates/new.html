@@ -1,0 +1,7 @@
+<h1>새로운 글 쓰기</h1>
+<form action="{% url 'create' %}" method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    해시태그: <input type ="text" name = "hashtags" placeholder="">
+    <button type="submit">submit</button>
+</form>
